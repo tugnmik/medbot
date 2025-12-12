@@ -1,5 +1,5 @@
-# Use PyTorch official image (PyTorch already installed!)
-FROM pytorch/pytorch:2.0.0-cuda11.7-cudnn8-runtime
+# Use Python 3.9 slim image
+FROM python:3.9-slim-bullseye
 
 WORKDIR /chatbot
 
@@ -17,9 +17,11 @@ RUN apt-get update && \
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 ENV PATH="/root/.cargo/bin:${PATH}"
 
-# Copy requirements (without torch since it's pre-installed)
+# Copy and install requirements
 COPY requirements.txt requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu && \
+    pip install --no-cache-dir -r requirements.txt
 
 COPY . /chatbot
 
