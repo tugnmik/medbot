@@ -1,17 +1,18 @@
-FROM python:3.9-slim-buster
+FROM python:3.9-slim-bullseye
 WORKDIR /chatbot
 
 RUN mkdir -p /usr/share/man/man1 /usr/share/man/man2 && \
-    apt-get update &&\
+    apt-get update && \
     apt-get install -y --no-install-recommends openjdk-11-jre && \
-    apt-get install ca-certificates-java -y && \
+    apt-get install -y ca-certificates-java && \
     apt-get clean && \
-    update-ca-certificates -f;
+    update-ca-certificates -f && \
+    rm -rf /var/lib/apt/lists/*
+
 ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/
 
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install gunicorn
 
 COPY . /chatbot
 
