@@ -1,17 +1,16 @@
-# PyTorch - standard version (CPU will be auto-selected on Railway)
-torch==2.0.0
-numpy==1.23.3
-SentencePiece==0.1.97
-transformers==4.22.2
-vncorenlp==1.0.3
-flask==2.2.2
-flask-sqlalchemy==2.5.1
-SQLAlchemy==1.4 
-tqdm==4.64.0
-tokenizers==0.12.1 
+# Core dependencies with flexible versions
+torch
+numpy<2.0
+transformers
+vncorenlp
+flask
+flask-sqlalchemy
+SQLAlchemy<2.0
+tqdm
+tokenizers
 pyserini
 faiss-cpu
-sqlalchemy
 nltk
 openai
 gunicorn
+sentencepiece
