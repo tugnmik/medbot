@@ -1,6 +1,4 @@
-# Use PyTorch CPU-only (smaller, faster download)
---extra-index-url https://download.pytorch.org/whl/cpu
-torch
+# PyTorch is pre-installed in base image, skip it
 numpy<2.0
 transformers
 vncorenlp

@@ -1,24 +1,20 @@
-FROM python:3.9-slim-bullseye
+# Use PyTorch official image (PyTorch already installed!)
+FROM pytorch/pytorch:2.0.0-cuda11.7-cudnn8-runtime
+
 WORKDIR /chatbot
 
-# Install Java + build dependencies for pyserini
+# Install Java for VnCoreNLP + build tools
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    openjdk-11-jre \
-    ca-certificates-java \
+    openjdk-11-jre-headless \
     build-essential \
-    gcc \
-    g++ \
     && \
     apt-get clean && \
-    update-ca-certificates -f && \
     rm -rf /var/lib/apt/lists/*
 
-ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 
-# Upgrade pip first
-RUN pip install --upgrade pip
-
+# Copy requirements (without torch since it's pre-installed)
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -31,5 +27,5 @@ ENV PORT=5000
 
 EXPOSE 5000
 
-# Use gunicorn for production with increased timeout for model inference
+# Use gunicorn for production
 CMD gunicorn --bind 0.0.0.0:$PORT --timeout 120 --workers 1 app:app
