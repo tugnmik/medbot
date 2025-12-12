@@ -1,6 +1,5 @@
-# PyTorch CPU version for deployment
---find-links https://download.pytorch.org/whl/cpu
-torch==1.13.0+cpu
+# PyTorch - standard version (CPU will be auto-selected on Railway)
+torch==2.0.0
 numpy==1.23.3
 SentencePiece==0.1.97
 transformers==4.22.2
