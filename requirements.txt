@@ -1,4 +1,5 @@
-# PyTorch is pre-installed in base image, skip it
+# Core dependencies
+torch
 numpy<2.0
 transformers
 vncorenlp

@@ -114,4 +114,6 @@ outputs/
 random_forest_dir/
 multirun/
 *_db
+!lookup_db/
 weight/
+!weight/saved_weights.pth
