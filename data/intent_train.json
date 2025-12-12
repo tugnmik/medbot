@@ -5,7 +5,6 @@
     "context_set": [""]
 },
 
-
 {	"tag": "problem_solving",
     "patterns": ["ad trả lời giúp mình 1 chút","tôi cần giúp đỡ", "giúp tôi", "cho tôi biết", "tôi có một số vấn đề", "vấn đề", "bạn có thể giúp tôi được không?", "cho em hỏi một chút ạ"],
     "responses": ["vâng tôi có thể giúp bạn", "cho tôi biết tôi có thể giúp gì cho bạn", "tôi có thể giúp gì cho bạn", "bạn cần giúp gì"],
@@ -14,26 +13,23 @@
 
 {
     "tag": "booking",
-    "patterns": ["tôi có thể hẹn gặp bác sĩ được không ạ", "cho tôi đặt lịch khám", "cho tôi đặt lịch hẹn khám", "đặt lịch khám cho tôi", "tôi muốn hẹn với bác sĩ", "tôi muốn đặt lịch hẹn khám với bác sĩ"],
+    "patterns": ["tôi có thể hẹn gặp bác sĩ được không ạ", "cho tôi đặt lịch khám", "cho tôi đặt lịch hẹn khám", "đặt lịch khám cho tôi", "tôi muốn hẹn với bác sĩ", "tôi muốn đặt lịch hẹn khám với bác sĩ", "đặt lịch khám", "đặt lịch hẹn", "tôi muốn khám bệnh", "hẹn khám", "muốn gặp bác sĩ", "tôi cần gặp bác sĩ", "làm sao để đặt lịch", "book lịch khám", "đăng ký khám bệnh", "xin đặt lịch", "cho em đặt lịch ạ"],
     "responses": ["Dạ bạn cho mình xin họ và tên ạ"],
     "context_set": [""]
 },
 
 {
-    "tag":"emotional problems",
-    "patterns":["Lo lắng nhiều lúc, cảm thấy tội lỗi nhưng không biết tại sao", "lo lắng", "mệt mỏi do trầm cảm", "cảm thấy căng thẳng", "hồi tưởng và ác mộng", "không quan tâm đến các hoạt động thường xuyên", "ý nghĩ tự tử", "ảo giác", "ảo tưởng", "Thay đổi tâm trạng, tính cách hoặc hành vi", "Khó tập trung hoặc chú ý"],
-    "responses":["bạn có thể đang bị các vấn đề về sức khỏe tinh thần và cảm xúc"],
+    "tag":"sinusitis",
+    "patterns":["nghẹt mũi kéo dài", "chảy mũi đặc", "đau đầu vùng trán", "đau hốc mắt", "hơi thở có mùi hôi", "nặng hơn khi thay đổi thời tiết", "hắt hơi liên tục buổi sáng", "chảy mũi trong", "ngứa mũi", "nghẹt mũi khi tiếp xúc bụi", "nghẹt mũi khi trời lạnh", "mũi bị nghẹt", "đau nhức vùng xoang", "đau đầu khi cúi xuống", "dịch mũi chảy xuống họng"],
+    "responses":["Bạn có thể đang bị viêm xoang. Nên đi khám chuyên khoa Tai Mũi Họng để được chẩn đoán và điều trị kịp thời."],
     "context_set":[""]
-
 },
 
 {
-    "tag":"COVID-19",
-    "patterns":["Sốt hoặc ớn lạnh, thở gấp","ăn không thấy vị", "Thở gấp hoặc khó thở", "tức ngực, mất vị giác hoặc khứu giác", "ho liên tục, đau nhức người",
-                " bị giảm hoặc mất vị giác hoặc khứu giác", "khó thở hoặc hụt hơi, khó nói hoặc cử động, đau ngực"],
-    "responses":["bạn có thế đang bị Covid-19"],
+    "tag":"gastric_reflux",
+    "patterns":["đau âm ỉ vùng thượng vị", "đau bụng khi đói", "đau bụng sau ăn", "ợ chua", "ợ nóng", "buồn nôn", "đầy bụng", "khó tiêu", "ăn nhanh no", "đau tăng khi stress", "đau khi thức khuya", "đau khi uống cà phê", "đau dạ dày tái đi tái lại", "hơi thở hôi dù vệ sinh răng miệng tốt", "hay buồn nôn", "chán ăn", "trào ngược", "dạ dày đau", "nóng rát thượng vị"],
+    "responses":["Bạn có thể đang bị trào ngược dạ dày thực quản (GERD). Nên đi khám chuyên khoa Tiêu hóa để được tư vấn và điều trị."],
     "context_set":[""]
-
 },
 
 {
@@ -41,7 +37,7 @@
     "patterns":["Chảy nước mũi hoặc nghẹt mũi, Đau họng", "Ho", "Đau nhức cơ thể nhẹ hoặc đau đầu nhẹ", 
                 "Hắt xì", "Sốt nhẹ", "đau họng", "nghẹt mũi hoặc chảy nước mũi", "hắt hơi", "ho", "giọng khàn", "nói chung là cảm thấy không khỏe",
                 "tôi cảm thấy nhức đầu nhẹ, đau nhức cơ thể hoặc sốt nhẹ", "tôi thấy đau và mệt mỏi dữ dội, ho khan thường xuyên", "Cảm thấy mệt mỏi trong người, đau nhức cơ thể"],
-    "responses":["bạn có thể bị cảm hoặc sốt thông thường"],
+    "responses":["Bạn có thể bị cảm lạnh hoặc sốt thông thường. Nên nghỉ ngơi, uống nhiều nước và theo dõi triệu chứng."],
     "context_set":[""]
 },
 
@@ -51,7 +47,7 @@
     "patterns":["đau tim", "nhức tim, đau ngực", "tức ngực", "ngực khó chịu", "khó thở", "nhịp tim nhanh hoặc không đều", "Đau ngực, tức ngực, tức ngực và khó chịu ở ngực (đau thắt ngực) Khó thở",
                 "Đau ở cổ, hàm, cổ họng, vùng bụng trên hoặc lưng. Đau, tê, yếu hoặc lạnh ở chân hoặc tay nếu các mạch máu ở những vùng cơ thể đó bị thu hẹp",
                 "Khó thở Khó thở có thể gặp khi gắng sức, nặng hơn có thể gặp cả khi nghỉ ngơi", "Cảm thấy hoa mắt chóng mặt, Mệt mỏi và buồn ngủ vào ban ngày, khó thở"],
-    "responses":["bạn có thể bị bệnh tim mạch"],
+    "responses":["Bạn có thể đang có triệu chứng bệnh tim mạch. Đây là tình trạng nghiêm trọng, nên đi khám bác sĩ ngay."],
     "context_set":[""]
 
 },
@@ -60,7 +56,7 @@
     "tag":"blood pressure",
     "patterns":["xuất huyết kết mạc", "chảy máu mũi", "chóng mặt và choáng", "mờ mắt", "hoa mắt", "buồn nôn hoặc buồn ói", "hay nôn hoặc ói", "nhức đầu, hoa mắt, chóng mặt, ù tai, mất ngủ nhẹ",
                 "Nhìn mờ, Chảy máu cam, Khó thở, Đau ngực Chóng mặt, Nhức đầu"],
-    "responses":["bạn có thể đang bị cao huyết áp"],
+    "responses":["Bạn có thể đang bị cao huyết áp. Nên kiểm tra huyết áp thường xuyên và đi khám bác sĩ."],
     "context_set":[""]
 
 }

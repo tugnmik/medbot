@@ -28,7 +28,7 @@ def bag_of_words(tokenized_sentence, all_words):
     return bag
 
 def get_label(path):
-    with open(path, 'r') as json_data:
+    with open(path, 'r', encoding='utf-8') as json_data:
         contents = json.load(json_data)
     tags = []
     X = []
@@ -51,6 +51,8 @@ def problem_response(searcher, sentence):
     return answer
 
 def disease_response(model, tokenizer, sentence, rdrsegmenter, tags_set, contents):
+    # Normalize: convert to lowercase to handle uppercase input
+    sentence = sentence.lower()
     sentence = ' '.join(rdrsegmenter.tokenize(sentence)[0])
     token = tokenizer.encode_plus(sentence, truncation=True,
                                         add_special_tokens=True,
@@ -76,7 +78,12 @@ def disease_response(model, tokenizer, sentence, rdrsegmenter, tags_set, content
             if tag == content['tag']:
                 answer = random.choice(content['responses'])
     else:
-        answer = 'Mình chưa hiểu ý bạn lắm, bạn có thể cho mình xin thêm thông tin được không nhỉ'            
+        # 80% chance for first response, 20% for second response
+        out_of_scope_responses = [
+            'Mình chưa hiểu ý bạn lắm, bạn có thể cho mình xin thêm thông tin được không nhỉ',
+            'Xin lỗi, các triệu chứng bạn mô tả nằm ngoài phạm vi hiểu biết của tôi. Để được sự tư vấn chính xác, bạn nên trao đổi với bác sĩ hoặc đến cơ sở y tế gần nhất'
+        ]
+        answer = random.choices(out_of_scope_responses, weights=[80, 20], k=1)[0]
     return answer, prob
 
 def chatgpt_response(sentence):

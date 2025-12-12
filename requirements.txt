@@ -1,5 +1,6 @@
---find-links https://download.pytorch.org/whl/torch_stable.html
-torch==1.13.0+cu117
+# PyTorch CPU version for deployment
+--find-links https://download.pytorch.org/whl/cpu
+torch==1.13.0+cpu
 numpy==1.23.3
 SentencePiece==0.1.97
 transformers==4.22.2
@@ -10,7 +11,8 @@ SQLAlchemy==1.4
 tqdm==4.64.0
 tokenizers==0.12.1 
 pyserini
-faiss-gpu
+faiss-cpu
 sqlalchemy
 nltk
 openai
+gunicorn

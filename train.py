@@ -46,3 +46,6 @@ def train():
     train_data_loader, val_data_loader = trainer.set_up_training_data(train_dir, val_dir, tokenizer)
     best_model = trainer.train(EPOCHS, PATIENCE, train_data_loader, val_data_loader)
     return best_model
+
+if __name__ == "__main__":
+    train()

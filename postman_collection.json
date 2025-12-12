@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "medical-chatbot-api",
+		"name": "Vietnamese Medical Chatbot API",
+		"description": "Test collection for Vietnamese Medical Chatbot REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Chat - Problem Mode",
+			"item": [
+				{
+					"name": "Chat - Greeting",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"xin chào\",\n    \"mode\": \"problem\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/chat",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "chat"]
+						}
+					}
+				},
+				{
+					"name": "Chat - Booking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"cho tôi đặt lịch khám\",\n    \"mode\": \"problem\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/chat",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "chat"]
+						}
+					}
+				},
+				{
+					"name": "Chat - Sinusitis (Viêm xoang)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"nghẹt mũi kéo dài, đau đầu vùng trán\",\n    \"mode\": \"problem\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/chat",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "chat"]
+						}
+					}
+				},
+				{
+					"name": "Chat - Gastric Reflux (Trào ngược)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"đau bụng thượng vị, ợ chua, ợ nóng\",\n    \"mode\": \"problem\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/chat",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "chat"]
+						}
+					}
+				},
+				{
+					"name": "Chat - Blood Pressure (Cao huyết áp)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"hoa mắt, chảy máu mũi, chóng mặt\",\n    \"mode\": \"problem\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/chat",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "chat"]
+						}
+					}
+				},
+				{
+					"name": "Chat - Cardiovascular (Tim mạch)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"đau tim, tức ngực, khó thở\",\n    \"mode\": \"problem\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/chat",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "chat"]
+						}
+					}
+				},
+				{
+					"name": "Chat - Common Cold (Cảm lạnh)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"sốt nhẹ, đau họng, ho, hắt hơi\",\n    \"mode\": \"problem\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/chat",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "chat"]
+						}
+					}
+				},
+				{
+					"name": "Chat - UPPERCASE Test",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"TÔI BỊ HOA MẮT, CHẢY MÁU MŨI\",\n    \"mode\": \"problem\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/chat",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "chat"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Chat - Thongtin Mode",
+			"item": [
+				{
+					"name": "Search Viêm Xoang Info",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"viêm xoang điều trị thế nào\",\n    \"mode\": \"thongtin\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/chat",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "chat"]
+						}
+					}
+				},
+				{
+					"name": "Search Trào Ngược Info",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\": \"trào ngược dạ dày nguyên nhân\",\n    \"mode\": \"thongtin\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/chat",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "chat"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Intents",
+			"item": [
+				{
+					"name": "Get All Intents",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "http://localhost:5000/api/intents",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "intents"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"item": [
+				{
+					"name": "Search Viêm Xoang",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "http://localhost:5000/api/search?q=viêm xoang&limit=5",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "search"],
+							"query": [
+								{"key": "q", "value": "viêm xoang"},
+								{"key": "limit", "value": "5"}
+							]
+						}
+					}
+				},
+				{
+					"name": "Search Trào Ngược",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "http://localhost:5000/api/search?q=trào ngược dạ dày&limit=5",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "search"],
+							"query": [
+								{"key": "q", "value": "trào ngược dạ dày"},
+								{"key": "limit", "value": "5"}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Patients CRUD",
+			"item": [
+				{
+					"name": "Get All Patients",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "http://localhost:5000/api/patients",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "patients"]
+						}
+					}
+				},
+				{
+					"name": "Create Patient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Nguyễn Văn A\",\n    \"sex\": \"male\",\n    \"age\": 35,\n    \"diagnosis\": \"Viêm xoang\",\n    \"date\": \"2025-12-12\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/patients",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "patients"]
+						}
+					}
+				},
+				{
+					"name": "Get Patient by ID",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "http://localhost:5000/api/patients/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "patients", "1"]
+						}
+					}
+				},
+				{
+					"name": "Delete Patient",
+					"request": {
+						"method": "DELETE",
+						"url": {
+							"raw": "http://localhost:5000/api/patients/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "patients", "1"]
+						}
+					}
+				}
+			]
+		}
+	]
+}

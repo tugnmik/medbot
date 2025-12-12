@@ -1,10 +1,9 @@
 {"intents": [
     {"tag": "greeting",
-    "patterns": ["Chào bạn", "Chào buổi sáng", "alo alo"],
+    "patterns": ["Chào bạn", "Chào buổi sáng", "alo alo", "xin chào"],
     "responses": ["Xin chào!", "Xin chào, tôi có thể giúp gì được không?"],
     "context_set": [""]
 },
-
 
 {	"tag": "problem_solving",
     "patterns": ["cho em hỏi cái này ạ", "mình hỏi thế này nhé", "em có điều này thắc mắc ạ","cho em hỏi cái này có được ko"],
@@ -14,31 +13,29 @@
 
 {
     "tag": "booking",
-    "patterns": ["tôi có thể hẹn gặp bác sĩ được không ạ", "cho tôi đặt lịch khám", "cho tôi đặt lịch hẹn khám", "đặt lịch khám cho tôi", "tôi muốn hẹn với bác sĩ", "tôi muốn đặt lịch hẹn khám với bác sĩ"],
+    "patterns": ["tôi có thể hẹn gặp bác sĩ được không ạ", "cho tôi đặt lịch khám", "cho tôi đặt lịch hẹn khám", "đặt lịch khám cho tôi", "tôi muốn hẹn với bác sĩ", "tôi muốn đặt lịch hẹn khám với bác sĩ", "đặt lịch khám", "hẹn khám"],
     "responses": ["Dạ bạn cho mình xin họ và tên ạ"],
     "context_set": [""]
 },
 
 {
-    "tag":"emotional problems",
-    "patterns":["Lo lắng nhiều lúc, cảm thấy tội lỗi nhưng không biết tại sao", "lo lắng", "mệt mỏi do trầm cảm", "cảm thấy căng thẳng", "hồi tưởng và ác mộng", "không quan tâm đến các hoạt động thường xuyên", "ý nghĩ tự tử", "ảo giác", "ảo tưởng", "Thay đổi tâm trạng, tính cách hoặc hành vi", "Khó tập trung hoặc chú ý"],
-    "responses":["Bạn có thể đang bị các vấn đề về sức khỏe tinh thần và cảm xúc"],
+    "tag":"sinusitis",
+    "patterns":["mũi nghẹt lâu rồi", "đau đầu ở trán", "hắt hơi sáng nào cũng bị", "ngứa trong mũi", "chảy nước mũi trong", "mũi nghẹt khi thời tiết thay đổi"],
+    "responses":["Bạn có thể đang bị viêm xoang. Nên đi khám chuyên khoa Tai Mũi Họng để được chẩn đoán và điều trị kịp thời."],
     "context_set":[""]
-
 },
 
 {
-    "tag":"COVID-19",
-    "patterns":["thở rất khó", "đau ngực", "ăn không thấy vị", "mũi không nghe mùi", "ho nhiều", "ho liên tục", "sốt cao (37,8 độ C hoặc hơn)", "đau nhức người"],
-    "responses":["bạn có thế đang bị Covid-19"],
+    "tag":"gastric_reflux",
+    "patterns":["đau bụng thượng vị", "ợ chua liên tục", "đầy hơi khó tiêu", "đau dạ dày khi đói", "nóng rát ở bụng", "buồn nôn sau ăn"],
+    "responses":["Bạn có thể đang bị trào ngược dạ dày thực quản (GERD). Nên đi khám chuyên khoa Tiêu hóa để được tư vấn và điều trị."],
     "context_set":[""]
-
 },
 
 {
     "tag":"common cold",
     "patterns":["mũi bị chảy nước, nghẹt mũi, họng đau rát", "Sưng hạch bạch huyết", "nhức người nhẹ", "nhức đầu nhẹ", "Hắt xì", "nóng đầu", "khó chịu trong người"],
-    "responses":["bạn có thể bị cảm lạnh thông thường"],
+    "responses":["Bạn có thể bị cảm lạnh thông thường. Nên nghỉ ngơi, uống nhiều nước và theo dõi triệu chứng."],
     "context_set":[""]
 },
 
@@ -46,7 +43,7 @@
 {
     "tag":"cardiovascular",
     "patterns":["đau tim", "nhức tim, đau ngực", "tức ngực", "ngực khó chịu", "khó thở", "nhịp tim nhanh hoặc không đều"],
-    "responses":["bạn có thể bị bệnh tim mạch"],
+    "responses":["Bạn có thể đang có triệu chứng bệnh tim mạch. Đây là tình trạng nghiêm trọng, nên đi khám bác sĩ ngay."],
     "context_set":[""]
 
 },
@@ -54,7 +51,7 @@
 {
     "tag":"blood pressure",
     "patterns":["xuất huyết kết mạc", "chảy máu mũi", "chóng mặt và choáng", "mờ mắt", "hoa mắt", "buồn nôn hoặc buồn ói", "hay nôn hoặc ói"],
-    "responses":["bạn có thể đang bị cao huyết áp"],
+    "responses":["Bạn có thể đang bị cao huyết áp. Nên kiểm tra huyết áp thường xuyên và đi khám bác sĩ."],
     "context_set":[""]
 
 }

@@ -73,7 +73,7 @@ class Trainer():
             if avg_val_loss < best_val_loss:
                 best_val_loss = avg_val_loss
                 best_model = self.model
-                torch.save(self.model.state_dict(), 'saved_weights.pth')
+                torch.save(self.model.state_dict(), 'weight/saved_weights.pth')
                 _patience = patience
             else:
                 _patience -= 1
