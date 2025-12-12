@@ -1,4 +1,5 @@
-# Core dependencies with flexible versions
+# Use PyTorch CPU-only (smaller, faster download)
+--extra-index-url https://download.pytorch.org/whl/cpu
 torch
 numpy<2.0
 transformers
